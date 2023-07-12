@@ -1,0 +1,1 @@
+document.querySelector('.square').addEventListener('click', ()=> console.log('1'))
