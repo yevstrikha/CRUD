@@ -10,8 +10,41 @@
 
 </head>
 <body>
+<div class="container">
+    <div class="main_screen">
+        <ul class="user_list"></ul>
+    </div>
+    <div class="user_form_block">
+        <form action="#" method="get" class="userForm" name="userForm">
+            <label for="f_name">
+                <input type="text" name="f_name" id="f_name" placeholder="First name">
+            </label>
+            <label for="l_name">
+                <input type="text" name="l_name" id="l_name" placeholder="Last name">
+            </label>
+            <label for="age">
+                <input type="number" name="age" id="age" placeholder="Your age">
+            </label>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="Your e-mail">
+            </label>
+            <label for="phone">
+                <input type="tel" name="phone" id="phone" placeholder="Your phone">
+            </label>
+            <label for="bank_card">
+                <input type="text" name="card" id="bank_card" placeholder="Card info">
+            </label>
+            <button type="button" id="form_save">Save</button>
+
+        </form>
+    </div>
+    <button type="button" id="addNewUser">Add new user</button>
+    <div class="user_info_pop-up hidden"></div>
+</div>
+
+
 <script src="scripts/user_data.js"></script>
+<script src="scripts/addition func.js"></script>
 <script src="scripts/js.js"></script>
-<div class="square"></div>
 </body>
 </html>

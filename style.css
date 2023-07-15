@@ -1,6 +1,98 @@
-.square {
-  width: 50px;
-  height: 50px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: auto; }
+
+.hidden {
+  display: none; }
+
+.user_form_block {
+  max-width: 60%;
+  width: 100%;
+  margin: auto;
+  padding: 40px; }
+
+.userForm {
+  width: 80%;
+  margin: auto;
+  padding: 20px 50px;
+  border: solid 1px red; }
+  .userForm label {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%; }
+    .userForm label input {
+      background-color: transparent;
+      padding: 7px 19px;
+      outline: none;
+      font-size: 18px;
+      line-height: 22px; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important; }
+
+input::placeholder {
+  color: green; }
+
+button {
+  text-align: center;
+  display: block;
+  padding: 12px 19px;
+  cursor: pointer;
+  font-size: 18px; }
+
+.main_screen {
+  padding: 50px; }
+
+.user_list {
+  list-style: none;
+  max-width: 45%;
+  width: 100%; }
+  .user_list li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 22px; }
+    .user_list li .span_div {
+      display: flex;
+      justify-content: space-between; }
+      .user_list li .span_div button {
+        padding: 2px 7px;
+        font-size: 12px;
+        margin-right: 10px; }
+
+.view {
+  background-color: limegreen; }
+
+.edit {
+  background-color: dodgerblue; }
+
+.remove {
   background-color: red; }
+
+.user_info_pop-up {
+  text-align: center;
+  border: solid red 1px;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  max-width: 45%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; }
+  .user_info_pop-up button {
+    padding: 5px 7px;
+    font-size: 12px; }
 
 /*# sourceMappingURL=style.css.map */
