@@ -1,15 +1,15 @@
 let User_data = [
     {
-        name: 'Alex',
+        name: 'John',
         lastName :'Snow',
         age: 35,
-        email: 'alex@gmail.com',
+        email: 'john@gmail.com',
         phone: '0996587458',
         bankCard: 1234567890123456
     },
     {
         name: 'Bill',
-        lastName :'Gaits',
+        lastName :'Gates',
         age: 27,
         email: 'bill@gmail.com',
         phone: '0956532758',

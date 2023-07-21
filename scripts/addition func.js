@@ -18,11 +18,12 @@ function createElement(tagName, attributes,content, handlers, parent) {
 function addSpan(listItem,i) {
     let spanDiv = createElement('div', {className: 'span_div',id: i}, '', null, listItem)
     let spanView = createElement('button', {type: 'button', className: 'view'}, 'View', {click : viewFunc}, spanDiv)
-    let spanEdit = createElement('button', {type: 'button', className: 'edit'}, 'Edit', null, spanDiv);
+    let spanEdit = createElement('button', {type: 'button', className: 'edit'}, 'Edit', {click : editFunc}, spanDiv);
     let spanRemove = createElement('button', {type: 'button', className: 'remove'}, 'Remove', {click : removeFunc}, spanDiv)
 }
 
 function closePopUp() {
    document.querySelector('.user_info_pop-up').classList.toggle('hidden')
-
 }
+
+
