@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background: url(img/clock_wall.jpg)no-repeat;
+  background-size: cover;
+}
 .container {
   max-width: 1170px;
   width: 100%;
@@ -28,7 +31,7 @@
   border: solid 1px red;
 
   label {
-    display: block;
+    display: flex;
     margin-bottom: 15px;
     width: 100%;
 
@@ -36,8 +39,6 @@
       background-color: transparent;
       padding: 7px 19px;
       outline: none;
-      //border: none;
-      //border-bottom: solid 2px black;
       font-size: 18px;
       line-height: 22px;
 
@@ -53,10 +54,25 @@ input::placeholder {
   color: green;
 }
 
+.form_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    background-color: forestgreen;
+    &:last-of-type {
+      background-color: red;
+    }
+  }
+
+
+}
+
 button {
   text-align: center;
   display: block;
-  padding: 12px 19px;
+  padding: 7px 12px;
   cursor: pointer;
   font-size: 18px;
 }
@@ -129,12 +145,16 @@ button {
   }
 
 }
-.user_info_pop-up{
-  h2{
-    span{
+
+.user_info_pop-up {
+  h2 {
+    span {
       font-size: 22px;
       color: red;
     }
 
   }
+}
+.attention{
+  border: solid 2px red;
 }

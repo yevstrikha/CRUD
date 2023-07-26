@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  background: url(img/clock_wall.jpg) no-repeat;
+  background-size: cover; }
+
 .container {
   max-width: 1170px;
   width: 100%;
@@ -23,7 +27,7 @@
   padding: 20px 50px;
   border: solid 1px red; }
   .userForm label {
-    display: block;
+    display: flex;
     margin-bottom: 15px;
     width: 100%; }
     .userForm label input {
@@ -39,10 +43,19 @@ input:-webkit-autofill {
 input::placeholder {
   color: green; }
 
+.form_buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; }
+  .form_buttons button {
+    background-color: forestgreen; }
+    .form_buttons button:last-of-type {
+      background-color: red; }
+
 button {
   text-align: center;
   display: block;
-  padding: 12px 19px;
+  padding: 7px 12px;
   cursor: pointer;
   font-size: 18px; }
 
@@ -102,5 +115,8 @@ button {
 .user_info_pop-up h2 span {
   font-size: 22px;
   color: red; }
+
+.attention {
+  border: solid 2px red; }
 
 /*# sourceMappingURL=style.css.map */
