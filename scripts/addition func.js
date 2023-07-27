@@ -26,6 +26,10 @@ function addSpan(listItem, i) {
 }
 
 function closePopUp() {
+    main.classList.remove('blur');
+    addUser.style.display = 'block'
+
+
     document.querySelector('.user_info_pop-up').classList.toggle('hidden')
 }
 
@@ -67,6 +71,8 @@ function saveFormFunc() {
         addUser.style.display = 'block';
         showUsers()
     }
+    main.classList.remove('blur');
+
 }
 
 function clearInputs() {

@@ -4,8 +4,9 @@ let userInfoPopUp = document.querySelector('.user_info_pop-up');
 const formSave = document.querySelector('#form_save');
 const formCancel = document.querySelector('#form_cancel');
 const addUser = document.querySelector('#addNewUser')
+const main = document.querySelector('.main_screen');
 
-let userArr = JSON.parse(localStorage.getItem('users'))
+let userArr =  JSON.parse(localStorage.getItem('users'))
 if (userArr === null) {
     localStorage.setItem('users', JSON.stringify(User_data))
 }
@@ -22,6 +23,8 @@ showUsers()
 
 
 function viewFunc(event) {
+    main.classList.add('blur');
+    addUser.style.display = 'none'
     document.querySelector('.user_info_pop-up').classList.toggle('hidden')
     const userId = event.target.parentElement.id
     userInfoPopUp.innerHTML = ''
@@ -45,6 +48,8 @@ function addUserFunc() {
 }
 
 function editFunc(event) {
+    main.style.display = 'none'
+    main.classList.add('blur');
     document.querySelector('#addNewUser').style.display = 'none'
     document.querySelector('.user_form_block').style.display = 'block';
     const userId = event.target.parentElement.id;
@@ -57,10 +62,12 @@ function editFunc(event) {
 
 
     userArr.splice(userId, 1);
-    // localStorage.setItem('users', JSON.stringify(userArr));
 }
 
 formCancel.addEventListener('click', function editCancel(event) {
+    main.style.display = 'block'
+    main.classList.remove('blur');
+
     userArr = JSON.parse(localStorage.getItem('users'));
     document.querySelector('.user_form_block').style.display = 'none';
     document.querySelector('.main_screen').style.display = 'block';
@@ -68,6 +75,7 @@ formCancel.addEventListener('click', function editCancel(event) {
 
 })
 function removeFunc(event) {
+    main.classList.add('blur');
     document.querySelector('#addNewUser').style.display = 'none'
     document.querySelector('.user_info_pop-up').classList.toggle('hidden')
     const userId = event.target.parentElement.id;
@@ -80,10 +88,12 @@ function removeFunc(event) {
     function removeCancel() {
         document.querySelector('.user_info_pop-up').classList.toggle('hidden');
         document.querySelector('#addNewUser').style.display = 'block'
+        main.classList.remove('blur');
 
     }
 
     function removeConfirm() {
+        main.classList.remove('blur');
         userArr.splice(userId, 1);
         localStorage.setItem('users', JSON.stringify(userArr));
         document.querySelector('.user_info_pop-up').classList.toggle('hidden');

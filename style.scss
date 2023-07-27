@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.blur{
+  filter: blur(4px);
+}
 body{
   background: url(img/clock_wall.jpg)no-repeat;
   background-size: cover;
@@ -28,8 +31,9 @@ body{
   width: 80%;
   margin: auto;
   padding: 20px 50px;
-  border: solid 1px red;
-
+  border: solid 2px #000;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.45);
   label {
     display: flex;
     margin-bottom: 15px;
@@ -41,17 +45,18 @@ body{
       outline: none;
       font-size: 18px;
       line-height: 22px;
+      color: white;
 
     }
   }
 }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 100) inset !important;
-}
+//input:-webkit-autofill {
+//  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 100) inset !important;
+//}
 
 input::placeholder {
-  color: green;
+  color: white;
 }
 
 .form_buttons {
@@ -124,15 +129,16 @@ button {
   text-align: center;
   border: solid red 1px;
   padding: 40px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 26px;
   max-width: 45%;
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
+  color: #9dea9d;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: rgba(0,0,0,0.45);
 
   button {
     display: block;
